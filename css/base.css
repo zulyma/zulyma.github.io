@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+/*-------------------fonts style---------------*/
+#principal{
+    font-family: 'Merriweather', serif;
+    font-size: 35px;
+}
+.hola{
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+#web-pets{
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+p,
+h1,
+h3{
+    font-family: 'Lora', serif;
+}
+a,
+h2{
+    font-family: 'Merriweather', serif;
+}
+
+
+
+
+/*-------------------Root---------------*/
+
+:root{
+    
+    --font-size:16px;
+    --main-color: #00ADB5;
+    --second-color:#21302F;
+    --main-modal-color:rgba(255, 255, 255, 0.582);
+    --second-modal-color:rgba(34,34,34,0.85);
+    --container-width:1200px;
+    
+     
+}
+html{
+    box-sizing: border-box;
+    
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*-------------MENU---------------------*/
+
+.header{
+    position: sticky; /*para que permanezca la cabecera*/
+    z-index:997 ;
+    top: 0;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+.header p{
+    margin: 0 auto;
+    text-align: center;
+}
+
+section{
+    padding: 6rem;
+    padding-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 100vh;
+    text-align: center;
+}
+.panel{
+    position: fixed;
+    z-index:998;
+    top: 0;
+    bottom: 0 ;
+    left: 0;
+    right: 0;
+    width:auto; 
+    background-color: var(--second-modal-color);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform:translate(100%,0);
+    
+
+
+}
+.panel.is-active{
+    transform: translate(0,0);
+    opacity:1;
+}
+
+
+
+.panel-btn{
+    position:fixed;
+    z-index:999;
+    bottom:1vh;
+    right:1vw;
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+    padding:0;
+    display:flex;
+    justify-content:center !important;
+    align-items:center;
+    background-color:var(--main-color) !important;
+}
+
+.menu{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+    border-radius: 50px 50px;
+    padding: 2rem;
+    width: inherit;
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.menu a:hover{
+    
+    font-weight: bold;
+    color: var(--second-color);
+    background-color: var(--main-modal-color);
+}
+/*----------------------Intereses------------------------------------*/
+.section1{
+    padding: 6rem;
+    padding-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width:800px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h5{
+    background-color: rgba(34, 34, 34, 0.39);
+    border-radius: 8px;
+    padding: 0.5em;
+}
+
+
+/*-------------------DarkThemeButton---------------*/
+.dark-theme-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+    outline: 0;
+    border:0;
+    transition: all 0.3s ease-out;
+}
+.dark-theme-btn:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-mode{
+    background-color: var(--second-color);
+    color: #fff;
+}
+/*-------------------Tecnologías---------------*/
+
+.container{
+    background-image: radial-gradient(circle at 56.16% 120.44%, #a1ffff 0, #8effff 12.5%, #7ffffa 25%, #73f5ec 37.5%, #6cd8d8 50%, #67bcc1 62.5%, #64a3ac 75%, #618f99 87.5%, #5e7e88 100%);
+    padding: 2rem;
+    
+    
+}
+.fa-brands{
+    color: var(--second-color);
+
+}
+.fa-solid-solid {
+    color: var(--second-color);
+
+}
+.fa-paw{
+    color: var(--main-color);
+}
+/*-------------------ScrollTopButton---------------*/
+.scroll-top-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: calc(4.2rem + 1vw);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+    outline: 0;
+    border:0;
+    transition: all 0.3s ease-out;
+}
+.scroll-top-btn:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+/*-------------------ContactForm Validations---------------*/
+.contact-form{
+    --form-ok-color:#4caf50;
+    --form-error-color:#772823;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.contact-form > *{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+    color: var(--second-color);
+
+}
+
+
+
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:var(--main-color);
+    border-color: var(--main-color);
+    
+
+}
+
+
+.contact-form [required]:valid{
+    border:thin solid var(--form-ok-color);
+}
+.contact-form [required]:invalid{
+    border:thin solid var(--form-error-color);
+}
+
+.contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: rgba(34, 34, 34, 0.39);
+    color: #fff;
+    transition: all 800ms ease;
+    
+}
+
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+.none{
+    display: none;
+}
+
+@keyframes show-message{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
